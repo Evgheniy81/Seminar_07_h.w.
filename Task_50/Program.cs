@@ -7,7 +7,7 @@
 8 4 2 4
 17 -> такого числа в массиве нет
 */
-/*
+
 int[,] CreateArray(int row, int col)
 {
     int[,] array = new int[row, col];
