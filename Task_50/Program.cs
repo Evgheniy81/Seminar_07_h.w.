@@ -7,6 +7,7 @@
 8 4 2 4
 17 -> такого числа в массиве нет
 */
+//////////////////
 
 int[,] CreateArray(int row, int col)
 {
@@ -39,52 +40,26 @@ void PrintArray(int[,] array)
 int[,] array = CreateArray(3, 5);
 PrintArray(array);
 
-////
-/*
-int[,] CreateArray(int rows, int cols)
+
+int row = array.GetLength(0);
+int col = array.GetLength(1);
+Console.WriteLine($"Введите число N =>");
+int N = Convert.ToInt32(Console.ReadLine());
+for (int i = 0; i < row; i++)
 {
-    int[,] array = new int[rows, cols];
-    Random rand = new Random();
-    for (int i = 0; i < rows; i++)
+    for (int j = 0; j < col; j++)
     {
-        for (int j = 0; j < cols; j++)
+        if (N == array[i, j])
         {
-            array[i, j] = rand.Next(0, 10);
-            Console.Write($"{array[i, j]}\t");
+           
+           Console.WriteLine($"Число {N} существует в данном массиве");
         }
-        Console.WriteLine();
-    }
-    return array;
-}
-int[,] array = CreateArray(5, 5);
-*/
-/*
-string SearchOfNumber (int [,] array){
-    int n = 5;
-    int row = array.GetLength(0);
-    int col = array.GetLength(1);
-
-    for (int i = 0; i < row; i++)
-    {
-        for (int j = 0; j < col; j++)
-        {
-            if (n == array[i,j])
-            {
-                string (array[i,j]);
-            }
-            
-            else
-            {
-                Console.WriteLine($"Число {n} не существует в данном массиве");
-            }
-            //return n;
-            //break;
-        }
-        //return n;
         
-    //}
-  
-*/
-//string = Console.WriteLine(SearchOfNumber);
+        else
+        {
+            Console.WriteLine($"Число {N} не существует в данном массиве");
+        }
+        
+    }
 
-
+}
